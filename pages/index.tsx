@@ -234,8 +234,16 @@ const Card: React.FC<{
   return (
     <div className="card">
       <div className="thumb">
-        <img src={previewDataUrl} alt={item.name} />
-      </div>
+  <Image
+    src={previewDataUrl}
+    alt={item.name}
+    width={320}
+    height={240}
+    style={{ width: "100%", height: "auto", objectFit: "contain" }}
+    unoptimized
+  />
+</div>
+
 
       <div className="meta">
         <h3>{item.name}</h3>
